@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import {
   ShieldCheck,
   CheckCircle2,
@@ -13,25 +13,8 @@ import {
   HelpCircle,
 } from "lucide-react";
 import { ActivationPlayer } from "./components/ActivationPlayer";
-import { trackMetaEvent } from "../lib/meta-pixel";
 
 export default function ActivationPage() {
-  // Dispara o evento Purchase do Facebook Pixel no carregamento da página com desduplicação
-  useEffect(() => {
-    trackMetaEvent(
-      "Purchase",
-      {
-        value: 97.0,
-        currency: "BRL",
-        content_name: "Google AI Pro 18 Meses",
-        content_type: "product",
-      },
-      {
-        deduplicateKey: "gemini_purchase_tracked_1369810175235012",
-      }
-    );
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col items-center">
       {/* ─── BARRA DE TOPO DE STATUS ─── */}

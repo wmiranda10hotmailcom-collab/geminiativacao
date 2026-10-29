@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/* Meta Pixel Code Oficial */}
+        {/* Meta Pixel Code Oficial com PageView e Purchase Imediatos */}
         <Script
           id="facebook-pixel"
           strategy="afterInteractive"
@@ -39,6 +39,12 @@ export default function RootLayout({
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '${PIXEL_ID}');
               fbq('track', 'PageView');
+              fbq('track', 'Purchase', {
+                value: 97.00,
+                currency: 'BRL',
+                content_name: 'Google AI Pro 18 Meses',
+                content_type: 'product'
+              });
             `,
           }}
         />
@@ -49,6 +55,14 @@ export default function RootLayout({
             width="1"
             style={{ display: "none" }}
             src={`https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1`}
+            alt=""
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={`https://www.facebook.com/tr?id=${PIXEL_ID}&ev=Purchase&cd[value]=97.00&cd[currency]=BRL&noscript=1`}
             alt=""
           />
         </noscript>
