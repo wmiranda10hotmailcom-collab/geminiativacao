@@ -6,13 +6,10 @@ import {
   CheckCircle2,
   AlertTriangle,
   PlayCircle,
-  MessageCircle,
   Sparkles,
-  Lock,
   HardDrive,
   Cpu,
   Layers,
-  ArrowRight,
   HelpCircle,
 } from "lucide-react";
 import { ActivationPlayer } from "./components/ActivationPlayer";
@@ -34,9 +31,6 @@ export default function ActivationPage() {
       }
     );
   }, []);
-
-  const whatsappSupportUrl =
-    "https://wa.me/5537999854238?text=Ol%C3%A1!%20Acabei%20de%20assistir%20ao%20v%C3%ADdeo%20de%20ativa%C3%A7%C3%A3o%20e%20estou%20pronto%20para%20receber%20meu%20link%20oficial.";
 
   return (
     <div className="min-h-screen flex flex-col items-center">
@@ -94,34 +88,15 @@ export default function ActivationPage() {
         </div>
 
         {/* AVISO IMPORTANTE SOBRE O VÍDEO */}
-        <div className="w-full max-w-3xl bg-amber-50/90 border border-amber-200/90 rounded-2xl p-4 md:p-5 flex items-start gap-3.5 mb-8 shadow-xs">
+        <div className="w-full max-w-3xl bg-amber-50/90 border border-amber-200/90 rounded-2xl p-4 md:p-5 flex items-start gap-3.5 mb-10 shadow-xs">
           <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
           <div className="text-xs sm:text-sm text-amber-900 leading-relaxed">
             <strong className="font-bold block mb-1">
-              Atenção: Assista antes de clicar no botão abaixo!
+              Atenção: Assista antes de abrir o link enviado no WhatsApp!
             </strong>
             O processo de ativação é instantâneo e vinculado diretamente à sua conta Google. Para evitar qualquer
-            erro de vinculação em contas secundárias, assista ao vídeo até o final antes de prosseguir.
+            erro de vinculação em contas secundárias, assista ao vídeo até o final antes de abrir o link oficial enviado na conversa.
           </div>
-        </div>
-
-        {/* ─── BOTÃO PRINCIPAL DE RESGATE DO LINK (CTA) ─── */}
-        <div className="w-full max-w-xl flex flex-col items-center mb-12">
-          <a
-            href={whatsappSupportUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full group bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-base sm:text-lg md:text-xl py-4 sm:py-5 px-6 rounded-2xl shadow-xl shadow-emerald-500/30 flex items-center justify-center gap-3 transition-all duration-200 hover:scale-[1.02] text-center animate-soft-pulse"
-          >
-            <MessageCircle className="w-6 h-6 fill-white shrink-0" />
-            <span>RESGATAR MEU LINK NO WHATSAPP</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform shrink-0" />
-          </a>
-
-          <p className="text-xs text-slate-500 text-center mt-3 flex items-center justify-center gap-1.5">
-            <Lock className="w-3.5 h-3.5 text-emerald-600" />
-            Canal oficial e direto do suporte pós-venda (+55 37 99985-4238)
-          </p>
         </div>
 
         {/* ─── PASSO A PASSO ILUSTRADO ─── */}
@@ -144,7 +119,7 @@ export default function ActivationPage() {
                 Assista ao Vídeo Tutorial
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Veja com atenção como aceitar o convite oficial no navegador sem sair da sua conta Google.
+                Veja com atenção como aceitar o convite oficial no navegador sem sair da sua conta Google principal.
               </p>
             </div>
 
@@ -153,10 +128,10 @@ export default function ActivationPage() {
                 2
               </div>
               <h3 className="font-bold text-slate-900 text-sm sm:text-base mb-1">
-                Receba Seu Link no WhatsApp
+                Abra o Link da Conversa
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Clique no botão verde acima para que nossa equipe libere seu link oficial exclusivo e verificado.
+                O seu link oficial exclusivo de ativação foi enviado diretamente para você na nossa conversa do WhatsApp.
               </p>
             </div>
 
@@ -244,19 +219,19 @@ export default function ActivationPage() {
             <div className="p-4 rounded-xl bg-blue-50/80 border border-blue-200">
               <h4 className="font-bold text-blue-950 flex items-center gap-2 mb-1.5 text-sm">
                 <HelpCircle className="w-4 h-4 text-blue-600 shrink-0" />
-                4. Suporte Dedicado Antes de Clicar
+                4. Suporte Dedicado na Conversa
               </h4>
               <p className="text-blue-900">
                 Caso você tenha qualquer dúvida, receio ou dificuldade técnica durante o processo, NÃO execute ações
-                às cegas. Chame imediatamente nosso suporte no WhatsApp: nós o auxiliaremos em tempo real para
-                garantir que sua ativação ocorra com 100% de sucesso.
+                às cegas. Basta nos responder diretamente na nossa conversa do WhatsApp: nós o auxiliaremos em tempo
+                real para garantir que sua ativação ocorra com 100% de sucesso.
               </p>
             </div>
           </div>
         </section>
 
         {/* ─── RECAPITULANDO O QUE VOCÊ ADQUIRIU ─── */}
-        <section className="w-full max-w-3xl outcrowd-card p-6 sm:p-8 mb-12">
+        <section className="w-full max-w-3xl outcrowd-card p-6 sm:p-8">
           <h2 className="text-lg sm:text-xl font-black text-slate-900 mb-4 flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-blue-600" />
             Recapitulando tudo o que você liberou por R$ 97:
@@ -312,38 +287,15 @@ export default function ActivationPage() {
             </div>
           </div>
         </section>
-
-        {/* SEGUNDO BOTÃO CTA INFERIOR */}
-        <div className="w-full max-w-xl flex flex-col items-center">
-          <a
-            href={whatsappSupportUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full group bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-base sm:text-lg md:text-xl py-4 sm:py-5 px-6 rounded-2xl shadow-xl shadow-emerald-500/30 flex items-center justify-center gap-3 transition-all duration-200 hover:scale-[1.02] text-center"
-          >
-            <MessageCircle className="w-6 h-6 fill-white shrink-0" />
-            <span>SOLICITAR MEU LINK DE ATIVAÇÃO AGORA</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform shrink-0" />
-          </a>
-        </div>
       </main>
 
-      {/* ─── FOOTER ─── */}
+      {/* ─── FOOTER LIMPO ─── */}
       <footer className="w-full bg-white border-t border-slate-200/80 py-8 px-4 text-center text-xs text-slate-500 mt-auto">
         <div className="max-w-4xl mx-auto flex flex-col items-center gap-2">
           <p className="font-semibold text-slate-700">
-            Google AI Pro • Suporte ao Cliente & Ativações Oficiais
+            Google AI Pro • Ativações Oficiais
           </p>
-          <p>
-            Atendimento via WhatsApp:{" "}
-            <a
-              href="https://wa.me/5537999854238"
-              className="text-blue-600 hover:underline font-medium"
-            >
-              +55 (37) 99985-4238
-            </a>
-          </p>
-          <p className="text-[11px] text-slate-400 mt-2">
+          <p className="text-[11px] text-slate-400 mt-1">
             Este site é um portal independente de facilitação e distribuição de cotas de licenças corporativas.
             Todas as marcas registradas pertencem aos seus respectivos proprietários.
           </p>
